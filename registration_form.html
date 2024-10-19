@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Kurale, 'serif'!important;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('./1.jpg');
+      background-size: cover;
+      width: 100%;
+    }
+
+    .registration-form {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 450px;
+    }
+    @media screen and (max-width:991px) {
+        .registration-form {
+      max-width: 350px;
+    }
+}
+    .registration-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label ,.label_part label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .btn_part .form-group label {
+      display: block;
+      margin-bottom: 0;
+      margin-right: 2px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="email"]:focus,
+    .form-group input[type="password"]:focus,
+    .form-group input[type="tel"]:focus {
+      border-color: #6e72fc;
+      outline: 0;
+    }
+
+    .form-group input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      width: 50%;
+    }
+
+    .form-actions button {
+      width: 48%;
+      padding:5px 8px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-actions .cancel-btn {
+      background: #ff5e5e;
+      color: white;
+    }
+
+    .form-actions .submit-btn {
+      background: linear-gradient(135deg, #6e72fc, #ad1deb);
+      color: white;
+    }
+
+    .form-actions button:hover {
+      opacity: 0.8;
+    }
+.grid__part{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2%;
+}
+  </style>
+</head>
+<body>
+
+  <div class="registration-form">
+    <h2>Registration</h2>
+    <div class="grid__part">
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" placeholder="Enter your number">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password">
+        </div>
+    </div>
+     <div class="btn_part">
+        <div class="label_part">
+            <label>Gender</label>
+        </div>
+        <div class="form-group" style="display: flex; align-items: center;gap: 2px;">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+     </div>
+  </div>
+
+</body>
+</html>
